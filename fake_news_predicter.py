@@ -18,6 +18,24 @@ print(stopwords.words('english'))
 
 ### Pre-processing the data starts from here 
 
-# Importing the dataset
+# Importing the dataset & Checking the dataset features 
 news_data = pd.read_csv('train.csv')
+news_data.shape
+news_data.head()
+
+# Checking the number of missing values in the dataset
+news_data.isnull().sum()
+
+# Because we have a large dataset that's why we are going to replacing the null values with empty string
+news_data = news_data.fillna('')
+
+# Merging the author name and news title
+news_data['content'] = news_data['author']+ ' ' +news_data['title']
+print(news_data['content'])
+
+# Separating the data & label
+X = news_data.drop(columns='label', axis=1)
+Y = news_data['label']
+
+
 
