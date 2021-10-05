@@ -37,5 +37,17 @@ print(news_data['content'])
 X = news_data.drop(columns='label', axis=1)
 Y = news_data['label']
 
+# Start Stemming process
+porter_stem = PorterStemmer()
+def stemmming(content):
+    stemmed_content = re.sub('[^a-zA-z]',' ',content)
+    stemmed_content = stemmed_content.lower()
+    stemmed_content = stemmed_content.split()
+    stemmed_content = [porter_stem.stem(word) for word in stemmed_content if not
+                       word in stopwords.words('english')]
+    
+
+
+
 
 
