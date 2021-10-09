@@ -64,5 +64,26 @@ print(X)
 X_train, X_test, Y_train, Y_test = train_test_split(X,Y,test_size = 0.2, stratify = Y, random_state = 2)
 
 
+### Data pre-processing part is done and now gonna start to build the ml model using logistic regression algorithm
+
+# Training the Model
+model = LogisticRegression()
+model.fit(X_train, Y_train)
+
+# Evaluation the Model 
+# Accuracy score on the training data
+X_train_prediction = model.predict(X_train)
+training_data_accuracy = accuracy_score(X_train_prediction, Y_train)
+print("Accuracy for training dataset", training_data_accuracy)
+
+# Accuracy score on the test data
+X_test_prediction = model.predict(X_test)
+test_data_accuracy = accuracy_score(X_test_prediction, Y_test)
+print("Accuracy for test dataset", test_data_accuracy)
+
+
+
+
+
 
 
