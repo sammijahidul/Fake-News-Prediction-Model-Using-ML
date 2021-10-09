@@ -49,6 +49,19 @@ def stemming(content):
     return stemmed_content
 news_data['content'] = news_data['content'].apply(stemming)
 print(news_data['content'])
+
+# Separating the data and label
+X = news_data['content'].values
+Y = news_data['label'].values
+
+# Converting textual to numerical data 
+vectorizer = TfidfVectorizer()
+vectorizer.fit(X)
+X = vectorizer.transform(X)
+print(X)
+
+
+
     
     
 
