@@ -12,3 +12,4 @@ Used Libraries to create the model:
 7) LogisticRegression from sklearn
 
 Accuracy of testing data over: 0.95%
+![Screenshot 2021-10-11 at 1 09 09 AM](https://user-images.githubusercontent.com/56561463/136710068-dd067fe7-3d69-42a0-84f5-59b5b2eb47f2.png)
