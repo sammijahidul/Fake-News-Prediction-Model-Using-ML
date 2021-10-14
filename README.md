@@ -1,7 +1,7 @@
 # Fake-News-Prediction-Model-Using-ML
 Collected a dataset that contains 20000+ news data with a binary output (whether the news is a real one or fake)
 this is a label dataset that means supervised learning & binary output that's why i used logistic regression algorithm to
-create this model
+create this model.
 Used Libraries to create the model:
 1) Numpy
 2) Pandas
